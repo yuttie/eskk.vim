@@ -41,5 +41,5 @@
                   (error "Unknown function found as output: %s" (symbol-name output)))
                  (t (error "Unknown type of output: %S" output)))))
           (when (and seq-str output-str (not (member seq found-seqs)))
-            (push seq found-seqs)
-            (insert (format "    \\   %s: [%s, %s],\n" seq-str output-str next-str))))))))
+            (insert (format "    \\   %s: [%s, %s],\n" seq-str output-str next-str)))
+          (push seq found-seqs))))))
