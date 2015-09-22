@@ -1527,28 +1527,28 @@ function! eskk#_initialize() "{{{
 
     EskkMap -type=phase:henkan-select:delete-from-dict X
 
-    EskkMap -type=mode:hira:toggle-hankata <C-q>
-    EskkMap -type=mode:hira:ctrl-q-key <C-q>
-    EskkMap -type=mode:hira:toggle-kata q
-    EskkMap -type=mode:hira:q-key q
+    EskkMap -type=mode:hira:toggle-hankata <C-Bslash>
+    EskkMap -type=mode:hira:ctrl-q-key <C-Bslash>
+    EskkMap -type=mode:hira:toggle-kata <Bslash>
+    EskkMap -type=mode:hira:q-key <Bslash>
     EskkMap -type=mode:hira:l-key l
     EskkMap -type=mode:hira:to-ascii l
     EskkMap -type=mode:hira:to-zenei L
     EskkMap -type=mode:hira:to-abbrev /
 
-    EskkMap -type=mode:kata:toggle-hankata <C-q>
-    EskkMap -type=mode:kata:ctrl-q-key <C-q>
-    EskkMap -type=mode:kata:toggle-kata q
-    EskkMap -type=mode:kata:q-key q
+    EskkMap -type=mode:kata:toggle-hankata <C-Bslash>
+    EskkMap -type=mode:kata:ctrl-q-key <C-Bslash>
+    EskkMap -type=mode:kata:toggle-kata <Bslash>
+    EskkMap -type=mode:kata:q-key <Bslash>
     EskkMap -type=mode:kata:l-key l
     EskkMap -type=mode:kata:to-ascii l
     EskkMap -type=mode:kata:to-zenei L
     EskkMap -type=mode:kata:to-abbrev /
 
-    EskkMap -type=mode:hankata:toggle-hankata <C-q>
-    EskkMap -type=mode:hankata:ctrl-q-key <C-q>
-    EskkMap -type=mode:hankata:toggle-kata q
-    EskkMap -type=mode:hankata:q-key q
+    EskkMap -type=mode:hankata:toggle-hankata <C-Bslash>
+    EskkMap -type=mode:hankata:ctrl-q-key <C-Bslash>
+    EskkMap -type=mode:hankata:toggle-kata <Bslash>
+    EskkMap -type=mode:hankata:q-key <Bslash>
     EskkMap -type=mode:hankata:l-key l
     EskkMap -type=mode:hankata:to-ascii l
     EskkMap -type=mode:hankata:to-zenei L
