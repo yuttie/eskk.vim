@@ -21,7 +21,9 @@
                 (cond
                  ((stringp next)
                   (format (if (string-match-p "'" next) "\"%s\"" "'%s'") next))
-                 (t "''")))
+                 ((null next)
+                  "''")
+                 (t (error "Unknown type of next: %s" next))))
                (output-str
                 (cond
                  ((stringp output)
