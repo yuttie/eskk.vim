@@ -16,14 +16,14 @@
                   (ignore))
                  ((symbolp seq)
                   (error "Unknown symbol found in seq: %s" (symbol-name seq)))
-                 (t (error "Unknown type of seq: %s" seq))))
+                 (t (error "Unknown type of seq: %S" seq))))
                (next-str
                 (cond
                  ((stringp next)
                   (format (if (string-match-p "'" next) "\"%s\"" "'%s'") next))
                  ((null next)
                   "''")
-                 (t (error "Unknown type of next: %s" next))))
+                 (t (error "Unknown type of next: %S" next))))
                (output-str
                 (cond
                  ((stringp output)
