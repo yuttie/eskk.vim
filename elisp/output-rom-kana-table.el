@@ -9,7 +9,14 @@
                (output (caddr rule))
                ;; string representations
                (seq-str
-                (format (if (string-match-p "'" seq) "\"%s\"" "'%s'") seq))
+                (cond
+                 ((stringp seq)
+                  (format (if (string-match-p "'" seq) "\"%s\"" "'%s'") seq))
+                 ((eq seq 'skk-kakutei-key)
+                  (ignore))
+                 ((symbolp seq)
+                  (error "Unknown symbol found in seq: %s" (symbol-name seq)))
+                 (t (error "Unknown type of seq: %s" seq))))
                (next-str
                 (cond
                  ((stringp next)
