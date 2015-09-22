@@ -30,6 +30,13 @@
                   (format (if (string-match-p "'" output) "\"%s\"" "'%s'") output))
                  ((consp output)
                   (format (if (string-match-p "'" (cdr output)) "\"%s\"" "'%s'") (cdr output)))
+                 ((memq output (list 'skk-set-henkan-point-subr 'skk-toggle-kana 'skk-kakutei-key 'skk-latin-mode 'skk-jisx0208-latin-mode 'skk-purge-from-jisyo 'skk-abbrev-mode 'skk-display-code-for-char-at-point 'skk-today))
+                  (ignore))
+                 ((eq output 'skk-auto-kutouten)
+                  (cond
+                   ((equal seq ".") "'。'")
+                   ((equal seq ",") "'、'")
+                   ((equal seq "-") "'ー'")))
                  ((functionp output)
                   (ignore)))))
           (unless (or (functionp output) (member seq found-seqs))
